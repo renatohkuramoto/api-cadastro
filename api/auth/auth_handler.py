@@ -19,7 +19,7 @@ def sing_in(email):
         'email': email,
         'type': 'access',
         'jti': str(uuid.uuid4()),
-        'expires': time.time() + 10200
+        'expires': time.time() + 1200
     }
     token = jwt.encode(payload, JWT_SECRET, algorithm=JWT_ALGORITHM)
     return token_response(token)
